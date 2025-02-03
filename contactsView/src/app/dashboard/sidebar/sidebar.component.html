@@ -1,0 +1,12 @@
+<nav class="sidebar">
+    <ul>
+      <li *ngFor="let item of menuItems" [class.active]="item.active">
+        <a >
+          <i [class]="item.icon" [ngStyle]="{'margin-right':'20px','color':'black'}"></i>
+          <span>{{ item.label }}</span>
+          <span *ngIf="item.badge" class="badge">{{ item.badge }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  

@@ -1,0 +1,56 @@
+{
+  "contacts": [
+    {
+      "id": "c418",
+      "first_name": "ankita",
+      "last_name": "randive",
+      "company_name": "tadvidInfotech",
+      "phone_number": "3478654312",
+      "email": "ankita@gmail.com",
+      "address": "Ring road",
+      "note": "sdgtrfgjmhfnbdz grtyikfyjhmnfgg rehyfmjngfd wtgtjghfgssdbggfvb",
+      "department": "engineering",
+      "image": "../../../assets/img_5.png",
+      "favorite": false
+    },
+    {
+      "id": "b661",
+      "first_name": "Deepali",
+      "last_name": "Dahat",
+      "company_name": "plate",
+      "phone_number": "9856433421",
+      "email": "deepali@gmail.com",
+      "address": "Rahate Nagar",
+      "note": "fvjhjk ikhhfderfd gujhkjoi fhuyjhyf dfuijhuyft sersfhcfiuh h fjdghuiedfhgtr egjhfndvmgtgf",
+      "department": "sales",
+      "image": "../../../assets/img_2.png",
+      "favorite": false
+    },
+    {
+      "id": "b5fc",
+      "first_name": "ajay",
+      "last_name": "rathod",
+      "company_name": "asus",
+      "phone_number": "4578965432",
+      "email": "ajay@gmail.com",
+      "address": "Rahate nagar toli,nagpur-27",
+      "note": "frestgfg o;ijiukjhg htgfgjkj srdhghuk uyhjchgghjt xgscrfyu knbjdgdc gsdcjmhn grfvkjltrjfgilvjfngg dsejhdgvkg,mfnygthfd ssdjgbvf,",
+      "department": "support",
+      "image": "../../../assets/img_4.png",
+      "favorite": false
+    },
+    {
+      "id": "9bdf",
+      "first_name": "deepesh",
+      "last_name": "nair",
+      "company_name": "fort",
+      "phone_number": "6789455432",
+      "email": "deeps@gmail.com",
+      "address": "Rahate nagar toli,nagpur-27",
+      "note": "festfghj kiujkjg gdhjnhik okyghgfvjb tdfuhjgjh jtgjkmghf ujghgfv dhfvhjmhbn hhedfujdyh dfujmvhgfg htgjkgf gdfvjmgc dyhfgjm",
+      "department": "engineering",
+      "image": "../../../assets/img_3.png",
+      "favorite": false
+    }
+  ]
+}
