@@ -6,12 +6,10 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HighlightStarDirective } from './highlight-star.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightStarDirective
   ],
   imports: [
     BrowserModule,
