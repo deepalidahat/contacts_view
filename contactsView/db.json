@@ -14,19 +14,6 @@
       "favorite": false
     },
     {
-      "id": "b661",
-      "first_name": "Deepali",
-      "last_name": "Dahat",
-      "company_name": "plate",
-      "phone_number": "9856433421",
-      "email": "deepali@gmail.com",
-      "address": "Rahate Nagar",
-      "note": "fvjhjk ikhhfderfd gujhkjoi fhuyjhyf dfuijhuyft sersfhcfiuh h fjdghuiedfhgtr egjhfndvmgtgf",
-      "department": "sales",
-      "image": "../../../assets/img_2.png",
-      "favorite": false
-    },
-    {
       "id": "b5fc",
       "first_name": "ajay",
       "last_name": "rathod",
@@ -37,7 +24,7 @@
       "note": "frestgfg o;ijiukjhg htgfgjkj srdhghuk uyhjchgghjt xgscrfyu knbjdgdc gsdcjmhn grfvkjltrjfgilvjfngg dsejhdgvkg,mfnygthfd ssdjgbvf,",
       "department": "support",
       "image": "../../../assets/img_4.png",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "9bdf",
@@ -50,6 +37,19 @@
       "note": "festfghj kiujkjg gdhjnhik okyghgfvjb tdfuhjgjh jtgjkmghf ujghgfv dhfvhjmhbn hhedfujdyh dfujmvhgfg htgjkgf gdfvjmgc dyhfgjm",
       "department": "engineering",
       "image": "../../../assets/img_3.png",
+      "favorite": false
+    },
+    {
+      "id": "8307",
+      "first_name": "Deepali",
+      "last_name": "Dahat",
+      "company_name": "Rmart",
+      "phone_number": "9876455432",
+      "email": "deepalidahat@gmail.com",
+      "address": "Rahate Nagar",
+      "note": "wsgfyhjjk tyfgjkjh tyfgjkh tfvjhhnoi ffdcyuhgf gsdyuhbhjyg rtfgujkbgh ",
+      "department": "sales",
+      "image": "../../../assets/img_5.png",
       "favorite": false
     }
   ]

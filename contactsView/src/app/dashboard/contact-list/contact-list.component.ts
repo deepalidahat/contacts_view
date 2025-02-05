@@ -58,6 +58,7 @@ export class ContactListComponent implements OnInit {
   getContactList() {
     this.contactService.getContacts().subscribe({
       next: (res: any) => {
+        
         console.log('res for contact list', res);
         this.contacts = res;
         if (this.contacts.length > 0) {
@@ -70,9 +71,34 @@ export class ContactListComponent implements OnInit {
     });
   }
 
+  // filteredContacts() {
+  //   let filtered = this.contacts;
+
+  //   if (this.searchTerm) {
+  //     const searchTermLower = this.searchTerm.toLowerCase();
+  //     filtered = filtered.filter((contact) =>
+  //       (contact.first_name + ' ' + contact.last_name)
+  //         .toLowerCase()
+  //         .includes(searchTermLower)
+  //     );
+  //   }
+
+  //   if (this.departmentFilter) {
+  //     filtered = filtered.filter(
+  //       (contact) =>
+  //         contact.department.toLowerCase() ===
+  //         this.departmentFilter.toLowerCase()
+  //     );
+  //   }
+
+  //   return filtered;
+  // }
+
+
   filteredContacts() {
     let filtered = this.contacts;
-
+  
+    // Filter by search term
     if (this.searchTerm) {
       const searchTermLower = this.searchTerm.toLowerCase();
       filtered = filtered.filter((contact) =>
@@ -81,7 +107,8 @@ export class ContactListComponent implements OnInit {
           .includes(searchTermLower)
       );
     }
-
+  
+    // Filter by department
     if (this.departmentFilter) {
       filtered = filtered.filter(
         (contact) =>
@@ -89,9 +116,16 @@ export class ContactListComponent implements OnInit {
           this.departmentFilter.toLowerCase()
       );
     }
-
+  
+    // Filter by starred contacts if the starred filter is active
+    if (this.starredFilter) {
+      filtered = filtered.filter((contact) => contact.favorite);
+    }
+  
     return filtered;
   }
+  
+
 
   getCompDetails() {
     const modalRef = this.modalService.open(ContactDetailComponent, {
@@ -104,16 +138,30 @@ export class ContactListComponent implements OnInit {
   }
 
   getStartted(contact: any) {
+    const previousFavorite = contact.favorite;
     contact.favorite = !contact.favorite;
     console.log('contact.favorite', contact.favorite);
+    this.contactService.updateContact(contact.id, { favorite: contact.favorite }).subscribe({
+      next: (res) => {
+        console.log('Contact updated successfully:', res);
+      },
+      error: (err) => {
+        console.error('Failed to update contact:', err);
+        contact.favorite = previousFavorite;
+      },
+    });
   }
   getDeleteContact(id: any) {
     alert('Delete Clicked! ID: ' + id);
     console.log('id for deleting contact:', id);
     this.getDeleteCont(id);
   }
-  getAllDetails(data: string) {
-    console.log('for all', data);
+  starredFilter: boolean = false; 
+  getAllDetails() {
+    console.log('for all');
+    console.log('Filter for starred contacts');
+  this.starredFilter = !this.starredFilter; // Toggle the starred filter state
+    //this.getSelectedContact()
   }
   getDepartment(department: string) {
     console.log('for department', department);
@@ -177,7 +225,17 @@ export class ContactListComponent implements OnInit {
   }
   getStarData(selectedContact: any) {
     console.log('enter fr str data', selectedContact);
+    const previousFavorite = selectedContact.favorite;
     selectedContact.favorite = !selectedContact.favorite;
+    this.contactService.updateContact(selectedContact.id, { favorite: selectedContact.favorite }).subscribe({
+      next: (res) => {
+        console.log('Contact updated successfully:', res);
+      },
+      error: (err) => {
+        console.error('Failed to update contact:', err);
+        selectedContact.favorite = previousFavorite;
+      },
+    });
   }
   getClose() {
     this.hideEditForm = false;
